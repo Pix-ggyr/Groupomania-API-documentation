@@ -1,0 +1,14 @@
+_id: ut_9921b71f5ef9490cb82b6f71d8357951
+type: UnitTest
+parentId: uts_625bb5b3a90241259c14f872a1fcf45f
+modified: 1606067645457
+created: 1606067289060
+requestId: req_wrk_0eb6f77f4e104242b95d898bf34ad4367f5f9b14
+name: Login 200
+code: |-
+  const payload = {
+  	email:"emailealacon@gmail.com",
+  	password:"jetemmerde33"
+  };
+  const response1 = await insomnia.send(JSON.stringify(payload));
+  expect(response1.status).to.equal(200);

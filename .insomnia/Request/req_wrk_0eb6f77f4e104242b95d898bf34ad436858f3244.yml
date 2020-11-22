@@ -1,0 +1,33 @@
+_id: req_wrk_0eb6f77f4e104242b95d898bf34ad436858f3244
+type: Request
+parentId: fld_wrk_0eb6f77f4e104242b95d898bf34ad4369b466094
+modified: 1606068122815
+created: 1606067267482
+url: "{{ base_url }}/post/{{ postId }}"
+name: Update a post
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "title": "string",
+      "content": "string",
+      "image": "http://domain.ext/post/file.gif"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1606067267482
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

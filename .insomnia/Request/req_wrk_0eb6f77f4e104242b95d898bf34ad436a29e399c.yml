@@ -1,0 +1,24 @@
+_id: req_wrk_0eb6f77f4e104242b95d898bf34ad436a29e399c
+type: Request
+parentId: fld_wrk_0eb6f77f4e104242b95d898bf34ad4369b466094
+modified: 1606068122811
+created: 1606067267479
+url: "{{ base_url }}/post/{{ postId }}"
+name: Delete a post
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1606067267479
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
