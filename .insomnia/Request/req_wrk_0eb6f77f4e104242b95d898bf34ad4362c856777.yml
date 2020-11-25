@@ -1,17 +1,18 @@
 _id: req_wrk_0eb6f77f4e104242b95d898bf34ad4362c856777
 type: Request
 parentId: fld_wrk_0eb6f77f4e104242b95d898bf34ad43612dea96f
-modified: 1606068122839
+modified: 1606323311452
 created: 1606063304491
 url: "{{ base_url }}/user/register"
-name: Create user
+name: Register
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-      "name": "string",
+      "firstname": "string",
+      "lastname": "string",
       "email": "user@example.com",
       "password": "string"
     }

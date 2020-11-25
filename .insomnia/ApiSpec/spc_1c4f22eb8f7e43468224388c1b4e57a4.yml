@@ -1,7 +1,7 @@
 _id: spc_1c4f22eb8f7e43468224388c1b4e57a4
 type: ApiSpec
 parentId: wrk_0eb6f77f4e104242b95d898bf34ad436
-modified: 1606068122944
+modified: 1606324090880
 created: 1606042829131
 fileName: Doc
 contents: >-
@@ -462,7 +462,7 @@ contents: >-
               "tags": [
                  "user"
               ],
-              "summary": "Create user",
+              "summary": "Register",
               "description": "",
               "consumes": [
                  "application/json"
@@ -492,6 +492,22 @@ contents: >-
                                 },
                                 "accessToken": {
                                    "type": "string"
+                                }
+                             }
+                          }
+                       }
+                    }
+                 },
+                 "400": {
+                    "description": "Bad request",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "message": {
+                                   "type": "string",
+                                   "example": "Bad request"
                                 }
                              }
                           }
@@ -1516,7 +1532,11 @@ contents: >-
               "Register": {
                  "type": "object",
                  "properties": {
-                    "name": {
+                    "firstname": {
+                       "type": "string",
+                       "maxLength": 63
+                    },
+                    "lastname": {
                        "type": "string",
                        "maxLength": 63
                     },
