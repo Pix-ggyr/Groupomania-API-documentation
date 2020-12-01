@@ -1,7 +1,7 @@
 _id: req_wrk_0eb6f77f4e104242b95d898bf34ad436d65dd507
 type: Request
 parentId: fld_wrk_0eb6f77f4e104242b95d898bf34ad4369b466094
-modified: 1606323311447
+modified: 1606820371292
 created: 1606067267489
 url: "{{ base_url }}/post"
 name: Create a post
@@ -11,14 +11,14 @@ body:
   mimeType: application/json
   text: |-
     {
-      "title": "string",
-      "content": "string",
-      "image": "http://domain.ext/post/file.gif"
+      "title": "Mon dernier selfie avec mon chien",
+      "image": "https://mongif.com/gif"
     }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
+    id: pair_79a9632587c94ebaa28666923c6f9959
 authentication:
   type: bearer
   token: "{{bearerToken}}"

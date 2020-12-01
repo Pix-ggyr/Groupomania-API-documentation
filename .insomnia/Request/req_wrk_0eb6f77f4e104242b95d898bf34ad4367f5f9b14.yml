@@ -1,7 +1,7 @@
 _id: req_wrk_0eb6f77f4e104242b95d898bf34ad4367f5f9b14
 type: Request
 parentId: fld_wrk_0eb6f77f4e104242b95d898bf34ad43612dea96f
-modified: 1606323311451
+modified: 1606820945229
 created: 1606063304487
 url: "{{ base_url }}/user/login"
 name: Log user in
@@ -11,13 +11,14 @@ body:
   mimeType: application/json
   text: |-
     {
-      "email": "user@example.com",
-      "password": "string"
+      "email": "user1@example.com",
+      "password": "password1"
     }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
+    id: pair_65a1468ca6094c56b28c150115e51546
 authentication: {}
 metaSortKey: -1606063304487
 isPrivate: false

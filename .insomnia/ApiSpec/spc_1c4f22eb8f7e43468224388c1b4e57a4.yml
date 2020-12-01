@@ -1,7 +1,7 @@
 _id: spc_1c4f22eb8f7e43468224388c1b4e57a4
 type: ApiSpec
 parentId: wrk_0eb6f77f4e104242b95d898bf34ad436
-modified: 1606324090880
+modified: 1606777828601
 created: 1606042829131
 fileName: Doc
 contents: >-
@@ -1030,7 +1030,7 @@ contents: >-
                  }
               }
            },
-           "react": {
+           "post": {
               "tags": [
                  "react"
               ],
@@ -1532,14 +1532,6 @@ contents: >-
               "Register": {
                  "type": "object",
                  "properties": {
-                    "firstname": {
-                       "type": "string",
-                       "maxLength": 63
-                    },
-                    "lastname": {
-                       "type": "string",
-                       "maxLength": 63
-                    },
                     "email": {
                        "type": "string",
                        "format": "email",
