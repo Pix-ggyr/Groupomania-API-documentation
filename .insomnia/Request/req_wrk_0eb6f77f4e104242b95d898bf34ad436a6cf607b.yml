@@ -1,9 +1,9 @@
 _id: req_wrk_0eb6f77f4e104242b95d898bf34ad436a6cf607b
 type: Request
 parentId: fld_wrk_0eb6f77f4e104242b95d898bf34ad4366b810c90
-modified: 1606821202644
+modified: 1606925537097
 created: 1606067267462
-url: "{{ base_url }}/react/4"
+url: "{{ base_url }}/react/{{ reactId }}"
 name: Delete a react
 description: ""
 method: DELETE

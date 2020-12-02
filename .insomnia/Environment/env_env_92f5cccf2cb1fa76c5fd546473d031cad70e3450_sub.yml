@@ -1,14 +1,14 @@
 _id: env_env_92f5cccf2cb1fa76c5fd546473d031cad70e3450_sub
 type: Environment
 parentId: env_92f5cccf2cb1fa76c5fd546473d031cad70e3450
-modified: 1606820992136
+modified: 1606925537562
 created: 1606063304528
 name: OpenAPI env
 data:
   scheme: http
   base_path: /api/v1
   host: localhost:3000
-  bearerToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQGV4YW1wbGUuY29tIiwiaWQiOjExLCJpYXQiOjE2MDY4MjA5NTUsImV4cCI6MTYwNjgyNDU1NX0.zSaVkzK7DmF-AydZHWGbbi5l0QTU3KZ8UcjyXsnRzQU
+  bearerToken: bearerToken
 dataPropertyOrder:
   "&":
     - scheme
