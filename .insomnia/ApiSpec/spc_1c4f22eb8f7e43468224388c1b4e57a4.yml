@@ -1,7 +1,7 @@
 _id: spc_1c4f22eb8f7e43468224388c1b4e57a4
 type: ApiSpec
 parentId: wrk_0eb6f77f4e104242b95d898bf34ad436
-modified: 1606925537611
+modified: 1607529575823
 created: 1606042829131
 fileName: Doc
 contents: >-
@@ -78,8 +78,8 @@ contents: >-
                        }
                     }
                  },
-                 "401": {
-                    "description": "Unauthorized",
+                 "500": {
+                    "description": "Internal server error",
                     "content": {
                        "application/json": {
                           "schema": {
@@ -87,7 +87,7 @@ contents: >-
                              "properties": {
                                 "error": {
                                    "type": "String",
-                                   "example": "Unauthorized"
+                                   "example": "Internal server error"
                                 }
                              }
                           }
@@ -149,22 +149,6 @@ contents: >-
                        }
                     }
                  },
-                 "401": {
-                    "description": "Unauthorized",
-                    "content": {
-                       "application/json": {
-                          "schema": {
-                             "type": "object",
-                             "properties": {
-                                "message": {
-                                   "type": "string",
-                                   "example": "Unauthorized"
-                                }
-                             }
-                          }
-                       }
-                    }
-                 },
                  "409": {
                     "description": "Conflict - A user already exist with given email address.",
                     "content": {
@@ -201,6 +185,22 @@ contents: >-
                           }
                        }
                     }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
+                                }
+                             }
+                          }
+                       }
+                    }
                  }
               }
            }
@@ -231,22 +231,6 @@ contents: >-
                        }
                     }
                  },
-                 "401": {
-                    "description": "Unauthorized",
-                    "content": {
-                       "application/json": {
-                          "schema": {
-                             "type": "object",
-                             "properties": {
-                                "error": {
-                                   "type": "String",
-                                   "example": "Unauthorized"
-                                }
-                             }
-                          }
-                       }
-                    }
-                 },
                  "404": {
                     "description": "Not found",
                     "content": {
@@ -257,6 +241,22 @@ contents: >-
                                 "error": {
                                    "type": "String",
                                    "example": "Not found"
+                                }
+                             }
+                          }
+                       }
+                    }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
                                 }
                              }
                           }
@@ -365,6 +365,22 @@ contents: >-
                           }
                        }
                     }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
+                                }
+                             }
+                          }
+                       }
+                    }
                  }
               }
            },
@@ -424,6 +440,22 @@ contents: >-
                           }
                        }
                     }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
+                                }
+                             }
+                          }
+                       }
+                    }
                  }
               }
            }
@@ -450,6 +482,22 @@ contents: >-
                        "application/json": {
                           "schema": {
                              "$ref": "#/definitions/User/Structure"
+                          }
+                       }
+                    }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
+                                }
+                             }
                           }
                        }
                     }
@@ -535,24 +583,16 @@ contents: >-
                        }
                     }
                  },
-                 "422": {
-                    "description": "Unprocessable Entity - Data given does not match prerequisites.",
+                 "500": {
+                    "description": "Internal server error",
                     "content": {
                        "application/json": {
                           "schema": {
                              "type": "object",
                              "properties": {
-                                "errors": {
-                                   "type": "object",
-                                   "properties": {
-                                      "field": {
-                                         "type": "array",
-                                         "items": {
-                                            "type": "string",
-                                            "example": "Validation error"
-                                         }
-                                      }
-                                   }
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
                                 }
                              }
                           }
@@ -603,8 +643,8 @@ contents: >-
                        }
                     }
                  },
-                 "401": {
-                    "description": "Unauthorized - Invalid login credentials.",
+                 "400": {
+                    "description": "Bad request",
                     "content": {
                        "application/json": {
                           "schema": {
@@ -612,7 +652,23 @@ contents: >-
                              "properties": {
                                 "message": {
                                    "type": "string",
-                                   "example": "Invalid login credentials."
+                                   "example": "Bad request"
+                                }
+                             }
+                          }
+                       }
+                    }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
                                 }
                              }
                           }
@@ -638,8 +694,8 @@ contents: >-
                  "200": {
                     "description": "OK"
                  },
-                 "401": {
-                    "description": "Unauthorized",
+                 "500": {
+                    "description": "Internal server error",
                     "content": {
                        "application/json": {
                           "schema": {
@@ -647,7 +703,7 @@ contents: >-
                              "properties": {
                                 "error": {
                                    "type": "string",
-                                   "example": "Unauthorized"
+                                   "example": "Internal server error"
                                 }
                              }
                           }
@@ -696,6 +752,22 @@ contents: >-
                                 "error": {
                                    "type": "String",
                                    "example": "Unauthorized"
+                                }
+                             }
+                          }
+                       }
+                    }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
                                 }
                              }
                           }
@@ -757,16 +829,16 @@ contents: >-
                        }
                     }
                  },
-                 "401": {
-                    "description": "Unauthorized",
+                 "500": {
+                    "description": "Internal server error",
                     "content": {
                        "application/json": {
                           "schema": {
                              "type": "object",
                              "properties": {
-                                "message": {
+                                "error": {
                                    "type": "string",
-                                   "example": "Unauthorized"
+                                   "example": "Internal server error"
                                 }
                              }
                           }
@@ -802,22 +874,6 @@ contents: >-
                        }
                     }
                  },
-                 "401": {
-                    "description": "Unauthorized",
-                    "content": {
-                       "application/json": {
-                          "schema": {
-                             "type": "object",
-                             "properties": {
-                                "error": {
-                                   "type": "String",
-                                   "example": "Unauthorized"
-                                }
-                             }
-                          }
-                       }
-                    }
-                 },
                  "404": {
                     "description": "Not found",
                     "content": {
@@ -828,6 +884,22 @@ contents: >-
                                 "error": {
                                    "type": "String",
                                    "example": "Not found"
+                                }
+                             }
+                          }
+                       }
+                    }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
                                 }
                              }
                           }
@@ -920,6 +992,22 @@ contents: >-
                           }
                        }
                     }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
+                                }
+                             }
+                          }
+                       }
+                    }
                  }
               }
            },
@@ -979,6 +1067,22 @@ contents: >-
                           }
                        }
                     }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
+                                }
+                             }
+                          }
+                       }
+                    }
                  }
               }
            }
@@ -1012,16 +1116,16 @@ contents: >-
                        }
                     }
                  },
-                 "401": {
-                    "description": "Unauthorized",
+                 "500": {
+                    "description": "Internal server error",
                     "content": {
                        "application/json": {
                           "schema": {
                              "type": "object",
                              "properties": {
                                 "error": {
-                                   "type": "String",
-                                   "example": "Unauthorized"
+                                   "type": "string",
+                                   "example": "Internal server error"
                                 }
                              }
                           }
@@ -1083,8 +1187,8 @@ contents: >-
                        }
                     }
                  },
-                 "401": {
-                    "description": "Unauthorized",
+                 "409": {
+                    "description": "Conflict",
                     "content": {
                        "application/json": {
                           "schema": {
@@ -1092,7 +1196,23 @@ contents: >-
                              "properties": {
                                 "message": {
                                    "type": "string",
-                                   "example": "Unauthorized"
+                                   "example": "Conflict - This react already exists"
+                                }
+                             }
+                          }
+                       }
+                    }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
                                 }
                              }
                           }
@@ -1128,22 +1248,6 @@ contents: >-
                        }
                     }
                  },
-                 "401": {
-                    "description": "Unauthorized",
-                    "content": {
-                       "application/json": {
-                          "schema": {
-                             "type": "object",
-                             "properties": {
-                                "error": {
-                                   "type": "String",
-                                   "example": "Unauthorized"
-                                }
-                             }
-                          }
-                       }
-                    }
-                 },
                  "404": {
                     "description": "Not found",
                     "content": {
@@ -1154,6 +1258,22 @@ contents: >-
                                 "error": {
                                    "type": "String",
                                    "example": "Not found"
+                                }
+                             }
+                          }
+                       }
+                    }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
                                 }
                              }
                           }
@@ -1246,6 +1366,22 @@ contents: >-
                           }
                        }
                     }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
+                                }
+                             }
+                          }
+                       }
+                    }
                  }
               }
            },
@@ -1274,22 +1410,6 @@ contents: >-
                        }
                     }
                  },
-                 "401": {
-                    "description": "Unauthorized",
-                    "content": {
-                       "application/json": {
-                          "schema": {
-                             "type": "object",
-                             "properties": {
-                                "error": {
-                                   "type": "String",
-                                   "example": "Unauthorized"
-                                }
-                             }
-                          }
-                       }
-                    }
-                 },
                  "404": {
                     "description": "Not found",
                     "content": {
@@ -1300,6 +1420,22 @@ contents: >-
                                 "error": {
                                    "type": "String",
                                    "example": "Not found"
+                                }
+                             }
+                          }
+                       }
+                    }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
                                 }
                              }
                           }
@@ -1353,6 +1489,22 @@ contents: >-
                           }
                        }
                     }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
+                                }
+                             }
+                          }
+                       }
+                    }
                  }
               }
            }
@@ -1386,16 +1538,16 @@ contents: >-
                        }
                     }
                  },
-                 "401": {
-                    "description": "Unauthorized",
+                 "500": {
+                    "description": "Internal server error",
                     "content": {
                        "application/json": {
                           "schema": {
                              "type": "object",
                              "properties": {
                                 "error": {
-                                   "type": "String",
-                                   "example": "Unauthorized"
+                                   "type": "string",
+                                   "example": "Internal server error"
                                 }
                              }
                           }
@@ -1431,22 +1583,6 @@ contents: >-
                        }
                     }
                  },
-                 "401": {
-                    "description": "Unauthorized",
-                    "content": {
-                       "application/json": {
-                          "schema": {
-                             "type": "object",
-                             "properties": {
-                                "error": {
-                                   "type": "String",
-                                   "example": "Unauthorized"
-                                }
-                             }
-                          }
-                       }
-                    }
-                 },
                  "404": {
                     "description": "Not found",
                     "content": {
@@ -1457,6 +1593,22 @@ contents: >-
                                 "error": {
                                    "type": "String",
                                    "example": "Not found"
+                                }
+                             }
+                          }
+                       }
+                    }
+                 },
+                 "500": {
+                    "description": "Internal server error",
+                    "content": {
+                       "application/json": {
+                          "schema": {
+                             "type": "object",
+                             "properties": {
+                                "error": {
+                                   "type": "string",
+                                   "example": "Internal server error"
                                 }
                              }
                           }
@@ -1497,8 +1649,8 @@ contents: >-
                  },
                  "avatar": {
                     "type": "string",
-                    "format": "uri",
-                    "example": "http://domain.ext/avatar/file.png"
+                    "format": "byte",
+                    "example": "data:image/png;base64,..."
                  },
                  "createdAt": {
                     "type": "string",
